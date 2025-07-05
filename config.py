@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 NOTION_TOKEN = os.getenv("NOTION_TOKEN")
-PAGE_URL = os.getenv("PAGE_URL")
 
 # Valida se o token foi carregado
 if not NOTION_TOKEN:
