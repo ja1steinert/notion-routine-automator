@@ -10,6 +10,7 @@ from metrics import (
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+# Define a lógica das operações nas linhas
 ROW_OPERATIONS = {
     "💧": (calculate_average, format_average),
     "🧘‍♂️": (count_emojis, format_emojis),
@@ -19,12 +20,8 @@ ROW_OPERATIONS = {
 }
 
 def main():
-    if not PAGE_URL:
-        logging.error("A variável PAGE_URL não está definida no arquivo .env")
-        return
-
     api = NotionAPI(notion)
-    page_id = api.extract_page_id_from_url(PAGE_URL)
+    page_id = api.extract_page_id_from_url(input("Insira a URL da página do Notion a ser processada: "))
     if not page_id:
         return
 
@@ -52,9 +49,6 @@ def main():
 
     for row in rows:
         title, cells = api.get_row_title_and_cells(row)
-
-        # DEBUG
-        logging.info(f"[DEBUG] Verificando linha. Título extraído: '{title}'")
 
         if title in ROW_OPERATIONS:
             values = [api.get_plain_text_from_cell(cell) for cell in cells[1:-1]]
