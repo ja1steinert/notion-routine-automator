@@ -48,7 +48,7 @@ pip install -r requirements.txt
 ### 5. Como conectar o Notion à automação
 
 1. **Duplique o template da página**  
-   🔗 [Checklist Semanal - Template](#)  
+   🔗 [Checklist Semanal - Template](https://basalt-universe-ac3.notion.site/Checklist-Semanal-2271df673a458026b769f14ada938160?source=copy_link)
    - Abra o link e clique em **“Duplicar”** no canto superior direito  
    - Mais detalhes: [Como duplicar páginas públicas no Notion](https://www.notion.so/help/duplicate-public-pages)
 
