@@ -28,7 +28,7 @@ Este script em Python automatiza o fluxo de uma **página semanal do Notion**, f
 ### 2. Clonando o repositório
 
 ```bash
-git clone https://github.com/ja1steinert/notion-scripts.git
+git clone https://github.com/ja1steinert/notion-routine-automator.git
 cd notion-scripts
 ```
 
